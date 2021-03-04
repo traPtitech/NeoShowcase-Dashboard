@@ -1,16 +1,25 @@
-import { UserConfig } from 'vite'
+import { defineConfig } from 'vite'
+import vue from '@vitejs/plugin-vue'
+// @ts-expect-error skip installing @types/webpack
 import path from 'path'
 
-const config: UserConfig = {
-  alias: {
-    '/@/': path.resolve(__dirname, 'src')
+declare const __dirname: string
+
+const config = defineConfig({
+  resolve: {
+    alias: {
+      '/@': path.resolve(__dirname, 'src')
+    }
   },
-  // proxy: {
-  //   '/api': {
-  //     target: 'https://example.com',
-  //     changeOrigin: true
+  // server: {
+  //   proxy: {
+  //     '/api': {
+  //       target: 'https://example.com',
+  //       changeOrigin: true
+  //     }
   //   }
   // }
-}
+  plugins: [vue()]
+})
 
 export default config
