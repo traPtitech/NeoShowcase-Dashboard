@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "direct-vuex": "^0.12.1",
+    "element-plus": "^1.0.2-beta.33",
     "vue": "^3.0.0",
     "vue-router": "^4.0.4",
     "vuex": "^4.0.0"
