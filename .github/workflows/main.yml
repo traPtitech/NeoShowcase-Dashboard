@@ -21,7 +21,7 @@ jobs:
           node-version: 14.x
       - uses: actions/checkout@v2
       - run: npm ci
-      - run: npm run gen-api
+      - run: npm run gen-apis
       - uses: actions/upload-artifact@v1
         with:
           name: apis
