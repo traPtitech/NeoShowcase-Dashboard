@@ -1,4 +1,3 @@
-// eslint-disable-next-line no-undef
 module.exports = {
   root: true,
   parser: 'vue-eslint-parser',
@@ -17,8 +16,16 @@ module.exports = {
     'plugin:vue/vue3-recommended',
     'plugin:prettier/recommended'
   ],
+  ignorePatterns: ['**/*.mjs', '**/*.js'],
   rules: {
     'no-console': 'warn',
-    'no-debugger': 'warn'
+    'no-debugger': 'warn',
+    'no-restricted-imports': [
+      'error',
+      {
+        name: '/@/lib/apis/generated',
+        message: 'Please use /@/lib/apis instead.'
+      }
+    ]
   }
 }
