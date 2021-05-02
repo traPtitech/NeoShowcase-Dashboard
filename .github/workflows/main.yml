@@ -16,13 +16,13 @@ jobs:
     name: Generate APIs
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/setup-node@v1
+      - uses: actions/setup-node@v2
         with:
           node-version: 14.x
       - uses: actions/checkout@v2
       - run: npm ci
       - run: npm run gen-apis
-      - uses: actions/upload-artifact@v1
+      - uses: actions/upload-artifact@v2
         with:
           name: apis
           path: ./src/lib/apis/generated
@@ -36,7 +36,7 @@ jobs:
           node-version: 14.x
       - uses: actions/checkout@v2
       - run: npm ci
-      - uses: actions/download-artifact@v1
+      - uses: actions/download-artifact@v2
         with:
           name: apis
           path: ./src/lib/apis/generated
@@ -53,7 +53,7 @@ jobs:
           node-version: 14.x
       - uses: actions/checkout@v2
       - run: npm ci
-      - uses: actions/download-artifact@v1
+      - uses: actions/download-artifact@v2
         with:
           name: apis
           path: ./src/lib/apis/generated
@@ -68,7 +68,7 @@ jobs:
           node-version: 14.x
       - uses: actions/checkout@v2
       - run: npm ci
-      - uses: actions/download-artifact@v1
+      - uses: actions/download-artifact@v2
         with:
           name: apis
           path: ./src/lib/apis/generated
