@@ -1,11 +1,8 @@
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
-// @ts-expect-error skip installing @types/webpack
 import path from 'path'
 
-declare const __dirname: string
-
-const config = defineConfig({
+export default defineConfig({
   resolve: {
     alias: {
       '/@': path.resolve(__dirname, 'src')
@@ -21,5 +18,3 @@ const config = defineConfig({
   // }
   plugins: [vue()]
 })
-
-export default config
