@@ -10,14 +10,11 @@
     "allowSyntheticDefaultImports": true,
     "baseUrl": ".",
     "lib": ["esnext", "dom", "dom.iterable"],
+    "types": ["vite/client"],
     "skipLibCheck": true,
     "noEmit": true,
     "incremental": true,
     "tsBuildInfoFile": "./node_modules/.tsbuildinfo",
-    "typeRoots": [
-      "node_modules/@types",
-      "src/types"
-    ],
     "paths": {
       "/@/*": [
         "src/*"
