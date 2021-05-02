@@ -1,6 +1,6 @@
 <template>
   <h1>{{ msg }}</h1>
-  <el-button @click="increment">count: {{ count }}</el-button>
+  <el-button type="primary" @click="increment">count: {{ count }}</el-button>
   <p>
     Edit <code>components/HelloWorld.vue</code> to test hot module
     <span :class="$style.re">replacement</span>.
