@@ -11,6 +11,7 @@
     "clean": "rimraf src/lib/apis/generated"
   },
   "dependencies": {
+    "axios": "^0.21.1",
     "direct-vuex": "^0.12.1",
     "element-plus": "^1.0.2-beta.41",
     "vue": "^3.0.11",
